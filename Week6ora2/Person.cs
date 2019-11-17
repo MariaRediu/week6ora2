@@ -8,13 +8,27 @@ namespace Week6ora2
 {
   public   class Person
     {
-        public string name;
-        public int age;
-        public Person(string nume,int varsta)
+        private string name;
+        private Nullable<int> age;
+        public Person(string nume, Nullable<int> varsta)
         {
             this.name = nume;
             this.age = varsta;
 
+        }
+        public override string ToString()
+        {
+            StringBuilder sir = new StringBuilder();
+            sir.AppendLine("Nume" + this.name);
+            if (age == null)
+            {
+                sir.AppendLine("Null");
+            }
+            else
+            {
+                sir.AppendLine("Age:" + this.age);
+            }
+            return sir.ToString();
         }
     }
 }

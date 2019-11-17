@@ -89,7 +89,7 @@ namespace Week6ora2
 
         public static bool operator !=(Student stud1, Student stud2)
         {
-            return !(Student.Equals(stud1, stud1));
+            return !(Student.Equals(stud1, stud2));
         }
 
         public override string ToString()
