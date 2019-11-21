@@ -103,17 +103,18 @@ namespace Week6ora2
             return Names.GetHashCode() ^ SSN.GetHashCode() ^ Email.GetHashCode() ^ Phone.GetHashCode() ^ Specialty.GetHashCode() ^ Faculty.GetHashCode() ^ University.GetHashCode();
         }
 
-        public object Clone()
+        object ICloneable.Clone()
         {
-            return MemberwiseClone();
-
+            return this.Clone();
         }
-        public Student Clones()
+
+        public Student Clone()
         {
-            return new Student(this.PrintNames, this.Address, this.Course, this.SSN, this.Email, this.Phone, this.Specialty, this.Faculty, this.University);
+            Student result = new Student(this.Names, this.SSN, this.Address, this.Phone, this.Email, this.Course, this.University, this.Faculty, this.Specialty);
 
-
+            return result;
         }
+
 
         public int CompareTo(Student studcurrent)
         {
