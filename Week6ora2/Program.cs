@@ -37,7 +37,7 @@ namespace Week6ora2
              }
              Console.ReadLine();
 
-             Student cloned = stud1.Clones();
+             Student cloned = stud1.Clone();
              Console.WriteLine("Cloned: ");
              Console.WriteLine(cloned);
 
